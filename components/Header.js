@@ -11,7 +11,8 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/dist/client/router";
-function Header() {
+function Header({ placeholder }) {
+  console.log(placeholder);
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -65,7 +66,7 @@ function Header() {
           }}
           className="pl-5 bg-transparent flex-grow outline-none text-sm text-gray-600 placeholder-gray-400"
           type="text"
-          placeholder="search now"
+          placeholder={placeholder || "search now"}
         ></input>
         <SearchIcon className="hidden md:inline-flex h-8 bg-red-500 text-white rounded-full p-2 cursor-pointer md:m-2" />
       </div>
