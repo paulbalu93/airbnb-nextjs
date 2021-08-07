@@ -10,7 +10,7 @@ import { useState } from "react";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 function Header({ placeholder }) {
   console.log(placeholder);
   const [searchInput, setSearchInput] = useState("");
