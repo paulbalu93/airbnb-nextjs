@@ -2,7 +2,7 @@ import { useRouter } from "next/dist/client/router";
 import Header from "../components/Header";
 import { format } from "date-fns";
 import ItemCard from "../components/ItemCard";
-import Map from "../components/map";
+import Map from "../components/Map";
 
 function Search({ searchResults }) {
   const router = useRouter();
